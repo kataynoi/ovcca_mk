@@ -1,4 +1,6 @@
 <script>
+    var date_serve = '<?php echo $answer[0]['date_serve']?>';
+
     $(document).ready(function () {
         var id = $('#id').val();
         console.log(id);
@@ -72,6 +74,10 @@
         </div>
         <div class="panel panel-info">
             <form action="#" class="">
+                <?php
+                //echo $answer[0];
+                ?>
+                <input type="hidden" id="id" class="form-control" placeholder="" value="<?php echo $answer[0]['id'] ?>">
                 <input type="hidden" id="cid" value="<?php echo $cid;?>">
                 <input type="hidden" id="pid" value="<?php echo $person['PID'];?>">
                 <input type="hidden" id="provider" value="<?php echo $this->session->userdata('id');?>">

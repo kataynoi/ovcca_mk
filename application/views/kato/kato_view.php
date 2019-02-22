@@ -1,4 +1,7 @@
 <script>
+    var date_sample = '<?php echo $answer[0]['date_sample']?>';
+    var date_exam = '<?php echo $answer[0]['date_exam']?>';
+
     $(document).ready(function () {
         var id = $('#id').val();
         console.log(id);
@@ -78,11 +81,11 @@
                 <input type="hidden" id="action" value="<?php echo $action ;?>"><br>
                 <input type="hidden" id="answer_id" value="<?php echo $answer_id ;?>"><br>
                 <label>1. Sample collection date</label>
-                <input style="padding-left: 10px;width: 200px" type="text" id="date_sample" data-type="date" class="form-control datepicker" data-date-language="th"
+                <input style="padding-left: 20px;width: 200px;margin-left: 20px" type="text" id="date_sample" data-type="date" class="form-control datepicker" data-date-language="th"
                        data-rel="tooltip" data-date-format="mm/dd/yyyy">
                 <br>
                 <label>2. Examination date </label>
-                <input style="padding-left: 10px;width: 200px" type="text" id="date_exam" data-type="date" class="form-control datepicker" data-date-language="th"
+                <input style="padding-left: 20px;width: 200px;margin-left: 20px" type="text" id="date_exam" data-type="date" class="form-control datepicker" data-date-language="th"
                        data-rel="tooltip" data-date-format="mm/dd/yyyy">
                 <br>
                 <label>3. Fecal examination results </label>

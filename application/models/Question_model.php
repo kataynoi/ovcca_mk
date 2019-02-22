@@ -49,9 +49,17 @@ class Question_model extends CI_Model
     }
     public  function  get_demo_answer($id){
         $rs = $this->db
-            ->select('demo1,demo2,demo3,demo4,demo5,demo6,demo7,demo8,demo9')
+            ->select('id,date_serve,demo1,demo2,demo3,demo4,demo5,demo6,demo7,demo8,demo9')
             ->where('id',$id)
             ->get('demographic')
+            ->result_array();
+        return $rs;
+    }
+    public  function  get_kato_answer($id){
+        $rs = $this->db
+            //->select('*')
+            ->where('id',$id)
+            ->get('kato')
             ->result_array();
         return $rs;
     }

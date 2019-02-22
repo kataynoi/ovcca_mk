@@ -24,7 +24,7 @@ $(document).ready(function(){
             });
         }
     };
-
+    $("#date_serve").datepicker('setDate', new Date(date_serve));
     demo.save_demo = function(items, action){
         //app.alert('Save Pass : '+user_id+' : '+password);
         demo.ajax.save_demo(items,action, function (err, data) {

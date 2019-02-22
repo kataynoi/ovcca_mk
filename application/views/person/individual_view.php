@@ -100,7 +100,14 @@
                 <?php
                 $no=1;
                 foreach($answer_kato as $a){
-                    echo "<tr><td>$no</td><td>".to_thai_date_short($a['date_sample'])."</td><td>".get_provider($a['provider'])."</td><td>xxx</td></tr>";
+                    $a['approve']==1?$approve=' disabled':$approve='';
+                    echo "<tr><td>$no</td><td>".to_thai_date_short($a['date_sample'])."</td><td>".get_provider($a['provider'])."</td><td>";
+                    echo "<div class='btn-group btn-group-sm pull-right' role='group' aria-label='Basic example'>
+                            <a  href='".site_url()."/kato/kato/".$a['cid']."/".$a['id']."/view' data-btn= 'view_demo' data-id='".$a['id']."' type='button' class='btn btn-secondary btn-info'><i class='fa fa-eye'></i></a>
+                            <a  href='".site_url()."/kato/kato/".$a['cid']."/".$a['id']."' data-btn= 'edit_demo' data-id='".$a['id']."' type='button' class='btn btn-secondary btn-warning $approve'><i class='fa fa-eye'></i></a>
+                            <a  data-btn='del_kato' data-id='".$a['id']."' type='button' class='btn btn-secondary btn-danger $approve'><i class='fa fa-times'></i></a>
+                            </div>";
+                    echo "</td></tr>";
                     $no++;
                 }
                 ?>

@@ -57,7 +57,7 @@ class Kato extends CI_Controller
         }
 
         if($id!=0){
-            $data['answer'] = $this->question->get_demo_answer($id);
+            $data['answer'] = $this->question->get_kato_answer($id);
             $data['action'] = 'update';
         }
         else

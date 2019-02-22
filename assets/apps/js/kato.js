@@ -40,6 +40,8 @@ $(document).ready(function(){
 
 
     }
+    $("#date_sample").datepicker('setDate', new Date(date_sample));
+    $("#date_exam").datepicker('setDate', new Date(date_exam));
 
      $('#btn_save_kato').on('click', function(e) {
             console.log('a');
