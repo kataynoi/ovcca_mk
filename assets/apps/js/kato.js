@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-    var demo = {};
-    demo.ajax = {
+    var kato = {};
+    kato.ajax = {
         get_user: function (status, cb) {
             var url = '/outsite/get_message',
                 params = {
@@ -25,9 +25,8 @@ $(document).ready(function(){
         }
     };
 
-    demo.save_kato = function(items, action){
-        //app.alert('Save Pass : '+user_id+' : '+password);
-        demo.ajax.save_kato(items,action, function (err, data) {
+    kato.save_kato = function(items, action){
+        kato.ajax.save_kato(items,action, function (err, data) {
             if (err) {
                 app.alert(err);
             }
@@ -99,7 +98,7 @@ $(document).ready(function(){
          else{
              console.log(items);
              console.log(action);
-             demo.save_kato(items,action);
+             kato.save_kato(items,action);
          }
 
     });

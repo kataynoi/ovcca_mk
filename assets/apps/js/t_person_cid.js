@@ -210,6 +210,6 @@ $(document).on('click', 'button[data-btn="btn_Demographic"]', function(e) {
     e.preventDefault();
     var cid = $(this).data('cid');
     console.log(cid);
-    window.location= base_url+'person/individual/'+cid;
+    window.location= site_url+'person/individual/'+cid;
 
 });
