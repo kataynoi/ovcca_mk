@@ -99,16 +99,28 @@ class Kato extends CI_Controller
 
         render_json($json);
     }
-    public function del_demo(){
+    public function del_kato(){
         $cid = $this->input->post('id');
 
-        $rs=$this->demo->del_demo($cid,$this->hospcode);
+        $rs=$this->kato->del_kato($cid,$this->hospcode);
         if($rs){
             $json = '{"success": true}';
         }else{
             $json = '{"success": false}';
         }
 
+        render_json($json);
+    }
+    public  function  get_answer(){
+        $id = $this->input->post('id');
+        $rs = $this->kato->get_answer($id);
+        if($rs){
+            $rows = json_encode($rs);
+            $json = '{"success": true, "rows": '.$rows.'}';
+        }
+        else{
+            $json = '{"success": false, "msg": "ไม่มีข้อมูล."}';
+        }
         render_json($json);
     }
 }

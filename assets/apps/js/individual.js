@@ -21,6 +21,15 @@ $(document).ready(function(){
             app.ajax(url, params, function (err, data) {
                 err ? cb(err) : cb(null, data);
             });
+        },del_kato:function (id,cb){
+            var url = '/kato/del_kato',
+                params = {
+                    id: id
+                }
+
+            app.ajax(url, params, function (err, data) {
+                err ? cb(err) : cb(null, data);
+            });
         }
     };
 
@@ -52,13 +61,26 @@ $(document).ready(function(){
             }
         });
     }
+    demo.del_kato = function(id){
+
+        demo.ajax.del_kato(id, function (err, data) {
+            if (err) {
+                swal(err)
+            }
+            else {
+                //swal('ลบข้อมูลเรียบร้อย')
+                app.alert('ลบข้อมูลเรียบร้อย');
+
+            }
+        });
+    }
 
 
     $(document).on('click', 'button[data-btn="btn_Demographic"]', function(e) {
         e.preventDefault();
         var cid = $(this).data('cid');
         console.log(cid);
-        window.location= base_url+'person/individual/'+cid;
+        window.location= site_url+'/person/individual/'+cid;
 
     });
 
@@ -67,7 +89,7 @@ $(document).ready(function(){
 
         var cid = $('#cid').val();
         console.log(cid);
-        window.location= base_url+'demographic/demographic/'+cid+'/0';
+        window.location= site_url+'/demographic/demographic/'+cid+'/0';
 
     });
 
@@ -76,7 +98,7 @@ $(document).ready(function(){
 
         var cid = $('#cid').val();
         console.log(cid);
-        window.location= base_url+'kato/kato/'+cid+'/0';
+        window.location= site_url+'/kato/kato/'+cid+'/0';
 
     });
     $(document).on('click', 'a[data-btn="del_demo"]', function(e) {
@@ -86,7 +108,7 @@ $(document).ready(function(){
         console.log(id);
         swal({
             title: "คำเตือน?",
-            text: "คุณต้องการลบข้อมูล "+name,
+            text: "คุณต้องการลบข้อมูล ",
             icon: "warning",
             buttons: [
                 'cancel !',
@@ -96,6 +118,28 @@ $(document).ready(function(){
         }).then(function(isConfirm){
             if(isConfirm){
                 demo.del_demo(id);
+                tr.hide();
+            }
+        });
+    });
+
+    $(document).on('click', 'a[data-btn="del_kato"]', function(e) {
+        e.preventDefault();
+        var id = $(this).data('id');
+        var tr = $(this).parent().parent().parent();
+        console.log(id);
+        swal({
+            title: "คำเตือน?",
+            text: "คุณต้องการลบข้อมูล ",
+            icon: "warning",
+            buttons: [
+                'cancel !',
+                'Yes !'
+            ],
+            dangerMode: true,
+        }).then(function(isConfirm){
+            if(isConfirm){
+                demo.del_kato(id);
                 tr.hide();
             }
         });

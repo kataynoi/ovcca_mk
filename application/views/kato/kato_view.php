@@ -1,6 +1,4 @@
 <script>
-    var date_sample = '<?php echo $answer[0]['date_sample']?>';
-    var date_exam = '<?php echo $answer[0]['date_exam']?>';
 
     $(document).ready(function () {
         var id = $('#id').val();
