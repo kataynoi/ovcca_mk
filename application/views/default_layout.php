@@ -15,6 +15,7 @@
     <script src="<?php echo base_url()?>assets/vendor/js/jquery.blockUI.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url()?>assets/vendor/css/bootstrap.css" rel="stylesheet">
+
     <!-- MetisMenu CSS -->
     <link href="<?php echo base_url()?>assets/vendor/css/metisMenu.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -42,6 +43,52 @@
     body {
         font-family: 'Kanit', sans-serif;
         font-size: 90%;
+    };
+    .badge {
+        padding: 1px 9px 2px;
+        font-size: 12.025px;
+        font-weight: bold;
+        white-space: nowrap;
+        color: #ffffff;
+        background-color: #999999;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        border-radius: 9px;
+    }
+    .badge:hover {
+        color: #ffffff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .badge-error {
+        background-color: #b94a48;
+    }
+    .badge-error:hover {
+        background-color: #953b39;
+    }
+    .badge-warning {
+        background-color: #f89406;
+    }
+    .badge-warning:hover {
+        background-color: #c67605;
+    }
+    .badge-success {
+        background-color: #468847;
+    }
+    .badge-success:hover {
+        background-color: #356635;
+    }
+    .badge-info {
+        background-color: #3a87ad;
+    }
+    .badge-info:hover {
+        background-color: #2d6987;
+    }
+    .badge-inverse {
+        background-color: #333333;
+    }
+    .badge-inverse:hover {
+        background-color: #1a1a1a;
     }
 </style>
 <!-- Custom Fonts -->

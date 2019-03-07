@@ -39,6 +39,22 @@ class Question_model extends CI_Model
          ->result_array();
         return $rs;
     }
+    public  function  get_behavior_history_question($cid,$hospcode){
+     $rs= $this->db
+         ->where('cid',$cid)
+         ->where('hospcode',$hospcode)
+         ->get('behavior')
+         ->result_array();
+        return $rs;
+    }
+    public  function  get_cca_history_question($cid,$hospcode){
+     $rs= $this->db
+         ->where('cid',$cid)
+         ->where('hospcode',$hospcode)
+         ->get('cca')
+         ->result_array();
+        return $rs;
+    }
     public  function  get_ultrasound_history_question($cid,$hospcode){
      $rs= $this->db
          ->where('cid',$cid)

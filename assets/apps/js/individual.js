@@ -101,6 +101,24 @@ $(document).ready(function(){
         window.location= site_url+'/kato/kato/'+cid+'/0';
 
     });
+
+    $('#btn_behavior_new').on('click',function(e){
+        e.preventDefault();
+
+        var cid = $('#cid').val();
+        console.log(cid);
+        window.location= site_url+'/behavior/behavior/'+cid+'/0';
+
+    });
+
+    $('#btn_cca_new').on('click',function(e){
+        e.preventDefault();
+
+        var cid = $('#cid').val();
+        console.log(cid);
+        window.location= site_url+'/cca/cca/'+cid+'/0';
+
+    });
     $(document).on('click', 'a[data-btn="del_demo"]', function(e) {
         e.preventDefault();
         var id = $(this).data('id');

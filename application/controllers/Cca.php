@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Kato extends CI_Controller
+class Cca extends CI_Controller
 {
     public $hospcode;
     public function __construct() {
@@ -8,7 +8,7 @@ class Kato extends CI_Controller
         //$this->layout->setLayout('admin_layout');
         if(!$this->session->userdata("online"))
             redirect(site_url('user/login'));
-        $this->load->model('Kato_model', 'kato');
+        $this->load->model('Cca_model', 'cca');
         //$this->load->model('Person_model', 'person');
         $this->load->model("t_person_cid_model",'t_person');
         $this->hospcode= $this->session->userdata('hospcode');
@@ -47,9 +47,9 @@ class Kato extends CI_Controller
         );
         echo json_encode($output);
     }
-    public  function kato ($cid,$id,$view=''){
+    public  function cca ($cid,$id,$view=''){
 
-        //$this->load->model("question_model",'question');
+        $this->load->model("question_model",'question');
         if(!empty($view)){
             $data['disable']="disabled";
         }else{
@@ -57,7 +57,7 @@ class Kato extends CI_Controller
         }
 
         if($id!=0){
-            $data['answer'] = $this->kato->get_answer($id);
+            $data['answer'] = $this->cca->get_answer($id);
             $data['action'] = 'update';
         }
         else
@@ -75,20 +75,20 @@ class Kato extends CI_Controller
             $rs['TYPEAREA'] = get_typearea($rs['TYPEAREA']);
         }
         $data['person'] = $rs;
-        $data['title'] = 'OV-01K (Kato-Katz)';
+        $data['title'] = 'CCA-02 อัลตราซาวด์';
         $data['cid']= $cid;
-        //$data['history_answer']= $this->kato->get_history($cid,$this->hospcode);
+        $data['history_answer']= $this->question->get_cca_history_question('1',$cid,$this->hospcode);
         //$data['answer']['provider'] = get_provider($data['answer']['provider']);
-        $this->layout->view("kato/kato_view.php", $data);
+        $this->layout->view("cca/cca_view.php", $data);
     }
 
-    public function save_kato(){
+    public function save_cca(){
         $data=$this->input->post('items');
         $action=$this->input->post('action');
         if($action=='insert'){
-            $rs=$this->kato->save_kato($data);
+            $rs=$this->cca->save_cca($data);
         }else if($action=='update'){
-            $rs=$this->kato->update_kato($data);
+            $rs=$this->cca->update_cca($data);
         }
         if($rs){
             $json = '{"success": true}';
@@ -99,10 +99,10 @@ class Kato extends CI_Controller
 
         render_json($json);
     }
-    public function del_kato(){
+    public function del_cca(){
         $cid = $this->input->post('id');
 
-        $rs=$this->kato->del_kato($cid,$this->hospcode);
+        $rs=$this->cca->del_cca($cid,$this->hospcode);
         if($rs){
             $json = '{"success": true}';
         }else{
@@ -113,7 +113,7 @@ class Kato extends CI_Controller
     }
     public  function  get_answer(){
         $id = $this->input->post('id');
-        $rs = $this->kato->get_answer($id);
+        $rs = $this->cca->get_answer($id);
         if($rs){
             $rows = json_encode($rs);
             $json = '{"success": true, "rows": '.$rows.'}';

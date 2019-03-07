@@ -124,6 +124,7 @@ class Person extends CI_Controller
         $data['cid']= $cid;
         $data['answer_demo']= $this->question->get_demo_history_question($cid,$this->hospcode);
         $data['answer_kato']= $this->question->get_kato_history_question($cid,$this->hospcode);
+        $data['answer_behavior']= $this->question->get_behavior_history_question($cid,$this->hospcode);
         $data['answer_ultrasound']= $this->question->get_ultrasound_history_question($cid,$this->hospcode);
         //$data['answer_demo']= $this->question->get_history_question('1',$cid,$this->hospcode);
         $this->layout->view("person/individual_view.php", $data);

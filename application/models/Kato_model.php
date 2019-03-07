@@ -125,4 +125,13 @@ class Kato_model extends CI_Model
         return $rs;
     }
 
+    public  function  get_history($cid,$hospcode){
+        $rs= $this->db
+            ->where('cid',$cid)
+            ->where('hospcode',$hospcode)
+            ->get('kato')
+            ->result_array();
+        return $rs;
+    }
+
 }
