@@ -7,10 +7,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Cca_model extends CI_Model
 {
-
+    var $table = "t_person_cid a";
+    var $select_column = array("a.CID", "a.NAME","a.LNAME", "a.BIRTH","a.age_y",'b.date_exam as date_serve');
+    var $order_column = array("a.CID", "a.NAME", "a.age_y", null, null, null);
     public function read($id)
     {
-
         $rs = $this->db
             ->where('a.id', $id)
             ->get('outsite_permit a')
@@ -96,5 +97,59 @@ class Cca_model extends CI_Model
             ->row();
         return $rs;
     }
+
+    function make_datatables(){
+        $this->make_query();
+        if($_POST["length"] != -1)
+        {
+            $this->db->limit($_POST['length'], $_POST['start']);
+        }
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+
+    function make_query()
+    {
+        $hospcode = $this->session->userdata('hospcode');
+        $this->db->select($this->select_column);
+
+        $this->db->from($this->table);
+
+        if(isset($_POST["search"]["value"]))
+        {
+            $this->db->group_start();
+            $this->db->like("a.CID", $_POST["search"]["value"]);
+            $this->db->or_like("a.NAME", $_POST["search"]["value"]);
+            $this->db->or_like("a.LNAME", $_POST["search"]["value"]);
+            $this->db->group_end();
+        }
+        $this->db->where('a.HOSPCODE',$hospcode);
+        $this->db->join('cca b','a.cid = b.cid');
+
+        if(isset($_POST["order"]))
+        {
+            $this->db->order_by($this->order_column[$_POST['order']['0']['column']], $_POST['order']['0']['dir']);
+        }
+        else
+        {
+            $this->db->order_by('a.CID', 'ASC');
+        }
+    }
+
+    function get_filtered_data(){
+        $this->make_query();
+        $query = $this->db->get();
+        return $query->num_rows();
+    }
+    function get_all_data()
+    {
+        $this->db->select("*");
+        $this->db->from($this->table);
+        return $this->db->count_all_results();
+    }
+
+
+
 
 }

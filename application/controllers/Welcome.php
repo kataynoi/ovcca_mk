@@ -15,9 +15,12 @@ class Welcome extends CI_Controller
 
     public function index()
     {
-
+        $data['count_demo'] = $this->db->from('demographic')->count_all_results();
+        $data['count_kato'] = $this->db->from('kato')->count_all_results();
+        $data['count_behavior'] = $this->db->from('behavior')->count_all_results();
+        $data['count_cca'] = $this->db->from('cca')->count_all_results();
         $data['user'] = $this->db->get('mas_users')->result();
-        $this->layout->view('welcome_message', $data);
+        $this->layout->view('dashboard/index_view', $data);
 
     }
 }
