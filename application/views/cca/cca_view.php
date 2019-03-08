@@ -65,6 +65,7 @@
                             <dt class="col-sm-3 text-truncate">ประเภทการอยู่อาศัย :</dt>
                             <dd class="col-sm-9"><?php echo $person['TYPEAREA'] ?></dd>
 
+
                         </dl>
                     </div>
                 </div>
@@ -324,219 +325,160 @@
                     </div>
 
                 </div>
-
                 <br>
-                <label>2. Liver </label>
+                <label style="padding-left: 10px;">2.3) Dilated Bile Duct </label>
+                    <div class="form-check" style="padding-left: 20px">
+                        <input class="form-check-input" type="checkbox" name="know" value="2">
+                        <label class="form-check-label" style="padding-left: 10px">0. No dilated duct </label>
 
+                        <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                        <label class="form-check-label" style="padding-left: 10px" >1. Right lobe </label>
+
+                        <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                        <label class="form-check-label" style="padding-left: 10px" >2. Left lobe </label>
+
+                        <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                        <label class="form-check-label" style="padding-left: 10px" >3. Common bile duct </label>
+
+                    </div>
+
+
+                <label style="padding-left: 10px;">2.3)Gallbladder</label>
+
+                <div class="form-check" style="padding-left: 20px">
+
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px">1. Normal </label>
+                    <br>
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px" >2. Wall </label>
+                    <br>
+                            <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 150px">
+                            <label class="form-check-label" style="padding-left: 10px" >2a) Thickening </label>
+                    <br>
+                            <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 150px">
+                            <label class="form-check-label" style="padding-left: 10px" >2. Wall </label>
+                    <br>
+                            <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 150px">
+                            <label class="form-check-label" style="padding-left: 10px" >2c) Mass </label>
+                    <br>
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px" >3. Gallstone </label>
+
+                    <br>
+                            <input class="form-check-input" type="radio" name="galstonex" value="1" style="margin-left: 150px">
+                            <label class="form-check-label" style="padding-left: 10px" >3.1 Single</label>
+                    <br>
+                            <input class="form-check-input" type="radio" name="Galstonex" value="2" style="margin-left: 150px">
+                            <label class="form-check-label" style="padding-left: 10px" >3.2 Multiple</label>
+                    <br>
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px" >4. Post cholecystectomy </label>
+                    <br>
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px" >5. Not seen </label>
+
+                </div>
+
+                <label style="padding-left: 10px;">4. Kidney</label>
+
+                <div class="form-check" style="padding-left: 20px">
+
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px">1. Normal </label>
+                    <br>
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px" >2. Renal cyst </label>
+                            <br>
+                            <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 150px">
+                            <label class="form-check-label" style="padding-left: 10px" >2.1) Right </label>
+                            <br>
+                            <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 150px">
+                            <label class="form-check-label" style="padding-left: 10px" >2.2) Left </label>
+                            <br>
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px" >3. Parenchymal change </label>
+
+                            <br>
+                            <input class="form-check-input" type="radio" name="galstonex" value="1" style="margin-left: 150px">
+                            <label class="form-check-label" style="padding-left: 10px" >3.1) Right </label>
+                            <br>
+                            <input class="form-check-input" type="radio" name="Galstonex" value="2" style="margin-left: 150px">
+                            <label class="form-check-label" style="padding-left: 10px" >3.2) Left </label>
+                            <br>
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px" >4. Renal stone </label>
+                            <br>
+                            <input class="form-check-input" type="radio" name="galstonex" value="1" style="margin-left: 150px">
+                            <label class="form-check-label" style="padding-left: 10px" >4.1) Renal stone without hydronephrosis </label>
+                            <br>
+                            <input class="form-check-input" type="radio" name="Galstonex" value="2" style="margin-left: 150px">
+                            <label class="form-check-label" style="padding-left: 10px" >4.2) Renal stone with hydronephrosis </label>
+                            <br>
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px" >5. Post nephrectomy </label>
+                            <br>
+                            <input class="form-check-input" type="radio" name="galstonex" value="1" style="margin-left: 150px">
+                            <label class="form-check-label" style="padding-left: 10px" >5.1a) Right </label>
+                            <br>
+                            <input class="form-check-input" type="radio" name="Galstonex" value="2" style="margin-left: 150px">
+                            <label class="form-check-label" style="padding-left: 10px" >51.b) Left </label>
+                            <br>
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px" >6. Not seen kidney </label>
+
+                </div>
+
+
+                <label style="padding-left: 10px;">5. Other Finding</label>
+                <div class="form-check" style="padding-left: 20px">
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px">1. Ascites finding </label>
+                        <br>
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px" > 2. Splenomegaly </label>
+                        <br>
+                    <input class="form-check-input" type="checkbox" name="know" value="2" style="margin-left: 100px">
+                    <label class="form-check-label" style="padding-left: 10px" >3. Others </label>
+                        <br>
+                    <label class="" style="margin-left: 143px">ระบุ (Other finding) </label>
+                    <input class="form-control" type="text" name="know" value="2" style="width: 200px;margin-left: 143px;">
+
+                </div>
+
+                <label style="padding-left: 10px;">6. การพบแพทย์ครั้งต่อไป</label>
                 <div class="form-check" style="padding-left: 20px">
                     <input class="form-check-input" type="radio" name="know" value="1">
                     <label class="form-check-label" style="padding-left: 10px"
-                           for="fecal_exam">ไม่พบเชื้อพยาธิใบไม้ตับ</label><br>
+                           for="fecal_exam">2. นัด 6 เดือน (กรณีตรวจพบ PDF)</label><br>
                     <input class="form-check-input" type="radio" name="know" value="2">
                     <label class="form-check-label" style="padding-left: 10px"
-                           for="fecal_exam">พบเชื้อพยาธิใบไม้ตับ</label><br>
-
-                </div>
-
-                <label>4. ท่านตั้งใจจะเลิกกินลาบปลาดิบ ก้อยปลาดิบ หรือไม่ </label>
-
-                <div class="form-check" style="padding-left: 20px">
-                    <input class="form-check-input" type="radio" name="stop" value="0">
-                    <label class="form-check-label" style="padding-left: 10px" for="fecal_exam">เลิก</label><br>
-                    <input class="form-check-input" type="radio" name="stop" value="1">
-                    <label class="form-check-label" style="padding-left: 10px" for="fecal_exam">ไม่เลิก</label>
-
-                    <div style="padding-left: 20px;display: nonex" class="row">
-                        <div class="col-md-3">
-                            <label>โปรดระบุเหตุผล (ไม่ว่าจะเลิกหรือไม่เลิกกิน)</label>
-                            <input type="text" id="stopx" value="" class="form-control" style="width: 500px">
-                        </div>
-                    </div>
+                           for="fecal_exam">1. Abnormal</label><br>
+                    <input class="form-check-input" type="checkbox" name="know" value="2">
+                    <label class="form-check-label" style="padding-left: 10px"
+                           for="fecal_exam">3. ส่งรักษาต่อที่โรงพยาบาล (กรณีสงสัยมะเร็งท่อน้ำดีให้เลือก Suspected CCA ด้วย) </label>
 
                     <br>
-                </div>
+                    <label class="" style="margin-left: 30px">ระบุ โรงพยาบาล </label>
+                    <input class="form-control" type="text" name="know" style="width: 400px;margin-left: 30px;">
+                    ส่งต่อเนื่องจาก <br>
+                    <input class="form-check-input" type="radio" name="know" value="1">
+                    <label class="form-check-label" style="padding-left: 10px"
+                           for="fecal_exam">3.1 Suspected CCA </label><br>
+                    <input class="form-check-input" type="radio" name="know" value="2">
+                    <label class="form-check-label" style="padding-left: 10px"
+                           for="fecal_exam">3.2 สาเหตุอื่นๆ โปรดระบุ </label>
+                    <br>
 
-                <label>5. ท่านตั้งใจจะกลับมารับการตรวจหาพยาธิใบไม้ตับครั้งต่อไปหรือไม่</label>
-
-                <div class="form-check" style="padding-left: 20px">
-                    <input class="form-check-input" type="radio" name="return" value="1">
-                    <label class="form-check-label" style="padding-left: 10px" for="fecal_exam">ไม่มา</label><br>
-                    <input class="form-check-input" type="radio" name="return" value="2">
-                    <label class="form-check-label" style="padding-left: 10px" for="return">มา</label>
-
-                    <div style="padding-left: 20px;display: nonex" class="row">
-                        <div class="col-md-3">
-                            <label>โปรดระบุเหตุผล (ไม่ว่าจะมาหรือไม่มา)</label>
-                            <input type="text" id="returnx" value="" class="form-control" style="width: 500px">
-                        </div>
-                    </div>
+                    <input class="form-check-input" type="checkbox" name="know" value="2">
+                    <label class="form-check-label" style="padding-left: 10px"
+                           for="fecal_exam">วินิจฉัยโดยแพทย์ แต่ตรวจอัลตราซาวด์โดยบุคคลอื่น </label>
 
                     <br>
-                </div>
+                    <label class="" style="margin-left: 30px">แพทย์ผู้ตรวจ</label>
+                    <input class="form-control" type="text" name="know" style="width: 400px;margin-left: 30px;">
 
-                <h3>ตอนที่ 2 ความรู้เกี่ยวกับโรคพยาธิใบไม้ตับและโรคมะเร็งท่อน้ำดี</h3>
-                <label> 6. เรื่องต่อไปนี้ ท่านเห็นว่าใช่หรือไม่ </label>
-                <table class="table table-responsive">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th class="text-center">ใช่</th>
-                            <th class="text-center">ไม่ใช่</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1 . การชิมปลาดิบเพียงเล็กน้อย ทำให้เป็นโรคพยาธิใบไม้ตับได้</td>
-                            <td class="text-center">
-                                <input type="radio" class="form-control" name="conform1" value="1">
-                            </td >
-                            <td class="text-center">
-                                <input type="radio" class="form-control" name="conform1" value="2">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2 . การรับประทาน ปลาส้มดิบ ทำให้เป็นโรคพยาธิใบไม้ตับได้</td>
-                            <td class="text-center">
-                                <input type="radio" class="form-control" name="conform2" value="1">
-                            </td >
-                            <td class="text-center">
-                                <input type="radio" class="form-control" name="conform2" value="2">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>3 . การบีบมะนาว หรือใส่มดแดงส้ม ลงไปในก้อยปลา เป็นการทำให้ก้อยสุก</td>
-                            <td class="text-center">
-                                <input type="radio" class="form-control" name="conform3" value="1">
-                            </td >
-                            <td class="text-center">
-                                <input type="radio" class="form-control" name="conform3" value="2">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>4 . การกินก้อยปลาแกล้มเหล้า เป็นการทำให้ก้อยสุก</td>
-                            <td class="text-center">
-                                <input type="radio" class="form-control" name="conform4" value="1">
-                            </td >
-                            <td class="text-center">
-                                <input type="radio" class="form-control" name="conform4" value="2">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>5 . ยาฆ่าพยาธิใบไม้ตับสามารถรับประทานได้บ่อยๆ </td>
-                            <td class="text-center">
-                                <input type="radio" class="form-control" name="conform5" value="1">
-                            </td >
-                            <td class="text-center">
-                                <input type="radio" class="form-control" name="conform5" value="2">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>6 . มะเร็งท่อน้ำดีในระยะเริ่มต้น สามารถรักษาให้หายขาดได้</td>
-                            <td class="text-center">
-                                <input type="radio" class="form-control" name="conform6" value="1">
-                            </td >
-                            <td class="text-center">
-                                <input type="radio" class="form-control" name="conform6" value="2">
-                            </td>
-                        </tr>
-
-
-
-                    </tbody>
-                </table>
-                <label>7. ในรอบ 6 เดือนที่ผ่านมา ท่านรับประทานอาหารต่อไปนี้หรือไม่</label>
-
-                <p>ประจำ หมายถึง ทุกวัน เกือบทุกวัน เกือบทุกสัปดาห์ หรือ ทุกเดือน
-                นานๆครั้ง หมายถึง หลายเดือนจึงมีพฤติกรรมเสี่ยงสักครั้ง หรือในบางโอกาส ซึ่งไม่บ่อย
-                ไม่กิน หมายถึง ไม่มีพฤติกรรมเสี่ยงเลย</p>
-                <table class="table table-responsive">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th class="text-center">กินประจำ</th>
-                        <th class="text-center">กินนนานๆครั้ง</th>
-                        <th class="text-center">ไม่กิน</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1 . ลาบปลาดิบ ก้อยปลาดิบ</td>
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="1" name="foodr1">
-                        </td >
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="2" name="foodr1">
-                        </td>
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="3" name="foodr1">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2 . ปลาจ่อมดิบ ปลาเจ่าดิบ ส้มปลาน้อยดิบ</td>
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="1" name="foodr2">
-                        </td >
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="2" name="foodr2">
-                        </td>
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="3" name="foodr2">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3 . แจ่วบองปลาร้าดิบ ปลาร้าดิบ</td>
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="1" name="foodr3">
-                        </td >
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="2" name="foodr3">
-                        </td>
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="3" name="foodr3">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4 . ส้มตำใส่ปลาร้าดิบ</td>
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="1" name="foodr4">
-                        </td >
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="2" name="foodr4">
-                        </td>
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="3" name="foodr4">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5 . ปลาส้มดิบ ปลาส้มฟักดิบ</td>
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="1" name="foodr5">
-                        </td >
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="2" name="foodr5">
-                        </td>
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="3" name="foodr5">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6 . หม่ำปลาดิบ </td>
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="1" name="foodr6">
-                        </td >
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="2" name="foodr6">
-                        </td>
-                        <td class="text-center">
-                            <input type="radio" class="form-control" value="3" name="foodr6">
-                        </td>
-                    </tr>
-                    </tbody>
-                    </table>
+                    <br>
                 <div class="panel-footer" style="text-align: center;">
                     <button type="button" class="btn btn-primary " id="btn_save_behavior" <?php echo $disable; ?>><i
                             class="fa fa-save "></i> บันทึก

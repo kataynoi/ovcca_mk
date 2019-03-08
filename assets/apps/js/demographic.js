@@ -1,4 +1,23 @@
 $(document).ready(function(){
+    var dataTable = $('#person_data').DataTable({
+        "processing": true,
+        "serverSide": true,
+        "order": [],
+        "pageLength": 50,
+        "ajax": {
+            url: site_url + '/demographic/fetch_person',
+            data: {
+                'csrf_token': csrf_token
+            },
+            type: "POST"
+        },
+        "columnDefs": [
+            {
+                "targets": [2, 3],
+                "orderable": false,
+            },
+        ],
+    });
 
     var demo = {};
     demo.ajax = {

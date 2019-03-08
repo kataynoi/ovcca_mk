@@ -17,16 +17,16 @@ class Demographic extends CI_Controller
     public function index()
     {
         $data['title'] = 'User data';
-        $this->layout->view("person/person_list_view.php", $data);
+        $this->layout->view("demographic/demo_person_list_view.php", $data);
     }
     public function person_target()
     {
 
         $data['title'] = 'User data';
-        $this->layout->view("person/person_list_view.php", $data);
+        $this->layout->view("person/demo_person_list_view.php", $data);
     }
     function fetch_person(){
-        $fetch_data = $this->t_person->make_datatables();
+        $fetch_data = $this->demo->make_datatables();
         $data = array();
         foreach($fetch_data as $row)
         {
@@ -35,14 +35,15 @@ class Demographic extends CI_Controller
             $sub_array[] = $row->NAME." ".$row->LNAME;
             $sub_array[] = to_thai_date($row->BIRTH);
             $sub_array[] = $row->age_y;
-            $sub_array[] = '<button data-btn="btn_Demographic" class="btn btn-success btn-sm btn-success" data-cid="'.$row->CID.'">บันทึกข้อมูลทั่วไป</button>';
-            $sub_array[] = '<button data-btn="btn_del" class="btn btn-danger btn-sm" data-cid="'.$row->CID.'" class="btn btn-danger btn-xs">Delete</button>';
-            $data[] = $sub_array;
+            $sub_array[] = to_thai_date_full($row->date_serve);
+            $sub_array[] = 'xxxx';
+            $sub_array[] = '<button data-btn="btn_view" class="btn btn-success btn-sm btn-success" data-cid="'.$row->CID.'">View</button>';
+              $data[] = $sub_array;
         }
         $output = array(
             "draw"                      =>     intval($_POST["draw"]),
-            "recordsTotal"              =>     $this->t_person->get_all_data(),
-            "recordsFiltered"           =>     $this->t_person->get_filtered_data(),
+            "recordsTotal"              =>     $this->demo->get_all_data(),
+            "recordsFiltered"           =>     $this->demo->get_filtered_data(),
             "data"                      =>     $data
         );
         echo json_encode($output);
@@ -80,7 +81,7 @@ class Demographic extends CI_Controller
             }
             $data['question']= $arr_result;
         }
-        $rs = $this->t_person->get_person($cid,$this->hospcode);
+        $rs = $this->demo->get_person($cid,$this->hospcode);
         if($rs){
             $rs['PRENAME'] = get_prename($rs['PRENAME']);
             $rs['BIRTH'] = to_thai_date_short($rs['BIRTH']);

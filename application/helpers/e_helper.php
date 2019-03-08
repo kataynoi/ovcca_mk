@@ -187,7 +187,7 @@ if(!function_exists('to_thai_date_full'))
 
             $new_d = $new_date[2];
 
-            $thai_date = to_thai_number((int)$new_d) . '  ' . $new_m . '  ' . to_thai_number($new_y);
+            $thai_date = (int)$new_d . '  ' . $new_m . '  ' . $new_y;
 
             return $thai_date;
         }
@@ -703,8 +703,7 @@ if(!function_exists('get_typearea'))
     }
 
 }
-if(!function_exists('get_provider'))
-{
+if(!function_exists('get_provider')) {
     function get_provider($code)
     {
         $ci =& get_instance();
@@ -714,7 +713,31 @@ if(!function_exists('get_provider'))
             ->row();
         return $rs ? $rs->name : '-';
     }
+}
+if(!function_exists('get_discharge_type'))
+{
+    function get_discharge_type($code)
+    {
+        $re_txt='';
 
+        switch ($code) {
+            case 1:
+                $re_txt = '1:ตาย';
+                break;
+            case 2:
+                $re_txt = '2:ย้าย';
+                break;
+            case 3:
+                $re_txt = '3:สาบสูญ';
+                break;
+            case 9:
+                $re_txt = '9: ยังมีชีวิตอยู่';
+                break;
+            default:
+                $re_txt ='ไม่ทราบ';
+        }
+        return $re_txt;
+    }
 }
 /* End of file epidem_helper.php */
 /* Location: ./application/helpers/epidem_helper.php */

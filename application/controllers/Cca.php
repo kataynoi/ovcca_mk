@@ -17,13 +17,13 @@ class Cca extends CI_Controller
     public function index()
     {
         $data['title'] = 'User data';
-        $this->layout->view("person/person_list_view.php", $data);
+        $this->layout->view("person/demo_person_list_view.php", $data);
     }
     public function person_target()
     {
 
         $data['title'] = 'User data';
-        $this->layout->view("person/person_list_view.php", $data);
+        $this->layout->view("person/demo_person_list_view.php", $data);
     }
     function fetch_person(){
         $fetch_data = $this->t_person->make_datatables();

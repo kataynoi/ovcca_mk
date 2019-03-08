@@ -41,10 +41,14 @@
                             <dt class="col-sm-3 text-truncate">ประเภทการอยู่อาศัย :</dt>
                             <dd class="col-sm-9"><?php echo $person['TYPEAREA']?></dd>
 
+
+                            <dt class="col-sm-3 text-truncate">สถานะการจำหน่าย :</dt>
+                            <dd class="col-sm-9"><?php echo get_discharge_type($person['DISCHARGE']); if($person['DISCHARGE'] =='1'){ echo "<span style='color: red'> วันที่ ".to_thai_date($person['DDISCHARGE'])."</span>" ;} ?></dd>
+
                         </dl>
                     </div>
                 </div>
-            <input type="hidden" id="cid" value="<?PHP echo $person['CID']?>">
+            <input type="hidden" id="cid" value="<?PHP echo $person['CID']?>"
             </form>
         </div>
     </div>
@@ -62,7 +66,7 @@
             <a class="nav-link" data-toggle="tab" href="#kato1" role="tab">
                 OV-01K (Kato-Katz) <span class="badge badge-success" id="count_demo"><?php echo sizeof($answer_kato);?></span></a>
         </li>
-        <li class="nav-item">
+        <!--<li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#parasep" role="tab">OV-01P (Parasep)</a>
         </li>
         <li class="nav-item">
@@ -70,14 +74,14 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#urine" role="tab">OV-01U (Urine)</a>
-        </li>
+        </li>-->
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#behavior" role="tab">
                 OV-02  แบบเก็บข้อมูลพฤติกรรมและปัจจัยที่เกี่ยวข้อง <span class="badge badge-warning" id="count_demo"><?php echo sizeof($answer_behavior);?></span></a>
         </li>
-        <li class="nav-item">
+        <!--<li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#treatments" role="tab">OV-03 Treatments</a>
-        </li>
+        </li>-->
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#cca" role="tab">
                 CCA-02 อัลตร้าซาวด <span class="badge badge-inverse" id="count_demo"><?php echo sizeof($answer_behavior);?></span>์</a>

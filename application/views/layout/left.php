@@ -29,7 +29,7 @@
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="<?php echo site_url('demographic/demographic/0/new')?>"><i class="far fa-address-book"></i> บันทึกข้อมูล Demographic <span class="fa arrow"></span></a>
+                <a href="<?php echo site_url('demographic/')?>"><i class="far fa-address-book"></i> บันทึกข้อมูล Demographic <span class="fa arrow"></span></a>
                 <!-- /.nav-second-level -->
             </li>
             <li>
@@ -37,7 +37,17 @@
                 <a href="#"><i class="fa fa-flask"></i> บันทึกผลตรวจไข่พยาธิ<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="<?php echo site_url('kato/kato/0/new')?>">บันทึกผลตรวจไข่พยาธิ</a>
+                        <a href="<?php echo site_url('kato/')?>">บันทึกผลตรวจไข่พยาธิ</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <!--http://localhost:8888/ovcca_mk/kato/kato/-->
+                <a href="#"><i class="fa fa-flask"></i>แบบเก็บข้อมูลพฤติกรรม<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="<?php echo site_url('behavior/')?>">แบบเก็บข้อมูลพฤติกรรมและปัจจัยที่เกี่ยวข้อง</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
@@ -46,28 +56,7 @@
                 <a href="#"><i class="fa fa-stethoscope fa-fw"></i> บันทึกผลตรวจ Ultrasound<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">Second Level Item</a>
-                    </li>
-                    <li>
-                        <a href="#">Second Level Item</a>
-                    </li>
-                    <li>
-                        <a href="#">Third Level <span class="fa arrow"></span></a>
-                        <ul class="nav nav-third-level">
-                            <li>
-                                <a href="#">Third Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level Item</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-third-level -->
+                        <a href="<?php echo site_url('cca/')?>">บันทึกผลตรวจ Ultrasound</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
