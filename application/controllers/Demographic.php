@@ -81,7 +81,7 @@ class Demographic extends CI_Controller
             }
             $data['question']= $arr_result;
         }
-        $rs = $this->demo->get_person($cid,$this->hospcode);
+        $rs = $this->t_person->get_person($cid,$this->hospcode);
         if($rs){
             $rs['PRENAME'] = get_prename($rs['PRENAME']);
             $rs['BIRTH'] = to_thai_date_short($rs['BIRTH']);
